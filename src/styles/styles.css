@@ -1,0 +1,161 @@
+/* Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #00010c; /* Dark background for contrast */
+  color: #ffffff; /* Default text color for readability */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content vertically */
+  text-align: center;
+}
+
+/* Header */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff; /* White text for title */
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Adds spacing to title letters */
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6); /* Adds subtle shadow for depth */
+}
+
+/* Playlist Container */
+.playlist {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgb(133, 181, 247); /* Light background for the playlist */
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; /* Allows the playlist container to take available space */
+  transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+/* Playlist Hover Effect */
+.playlist:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+/* Track Styles */
+.song, .podcast {
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 10px;
+  background: #e3f2fd; /* Light blue background for items */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #ccc; /* Soft border around tracks */
+}
+
+/* Hover Effect for Tracks */
+.song:hover, .podcast:hover {
+  transform: translateY(-5px); /* Subtle lift effect */
+  box-shadow: 0 8px 50px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+/* Title Styling */
+.song h3, .podcast h3 {
+  margin: 12px 0;
+  color: #1976d2; /* Blue color for titles */
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Description Styling */
+.song p, .podcast p {
+  color: #2f225c; /* Dark purple text for descriptions */
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Button Styles */
+button {
+  background-color: #0b0179; /* Blue button color */
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  margin: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Remove default outline */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for button */
+}
+
+/* Hover Effect for Buttons */
+button:hover {
+  background-color: #07006b; /* Slightly darker blue on hover */
+  transform: translateY(-3px); /* Button lift effect */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Focus Effect for Buttons (Accessibility) */
+button:focus {
+  outline: 3px solid #1976d2; /* Blue outline for focus */
+}
+
+/* Footer Styling */
+footer {
+  background-color: #343232;
+  color: white;
+  padding: 12px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-top: 2px solid #1976d2; /* Subtle border at the top of the footer */
+}
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem; /* Reduce title size on smaller screens */
+  }
+
+  .playlist {
+    padding: 15px;
+  }
+
+  .song, .podcast {
+    padding: 12px;
+    margin: 16px 0;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem; /* Further reduce title size on very small screens */
+  }
+
+  .playlist {
+    padding: 12px;
+  }
+
+  .song, .podcast {
+    padding: 10px;
+    margin: 12px 0;
+  }
+
+  button {
+    font-size: 0.85rem; /* Even smaller buttons */
+    padding: 8px 16px;
+  }
+}
